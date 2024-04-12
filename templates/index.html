@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Display</title>
+</head>
+<body>
+    <h1>Enter Text</h1>
+    <form method="post">
+        <input type="text" name="text_input">
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if number_to_display %}
+    <h2>Number: {{ number_to_display }}</h2>
+    {% endif %}
+</body>
+</html>
