@@ -8,17 +8,33 @@
     <script>
         async function predict() {
             const text = document.getElementById('userInput').value;
-            const tokenizer = new Tokenizer();
-            tokenizer.fitOnTexts([text]);
-            const sequence = tokenizer.textsToSequences([text]);
+            
+            // Simple tokenization (splitting by space)
+            const words = text.split(' ');
+            // Padding to a fixed length
             const maxLen = 100; // Adjust this value based on your model's input size
-            const paddedSequence = padSequences(sequence, {maxLen, padding: 'post', truncating: 'post'});
-            const encodedseq = label_encoder.transform(paddedSequence);
+            const paddedSequence = words.slice(0, maxLen).concat(new Array(maxLen - words.length).fill(''));
             
+            // Convert words to numbers (using ASCII codes)
+            const encodedseq = paddedSequence.map(word => {
+                return word.split('').map(char => char.charCodeAt(0));
+            });
+            
+            // Reshape to a 2D tensor
+            const inputTensor = tf.tensor2d(encodedseq);
+            
+            // Reshape to match model's input shape
+            const reshapedInput = inputTensor.reshape([1, maxLen]);
+            
+            // Load the model
             const model = await tf.loadLayersModel("fakenews01.h5");
-            const prediction = model.predict(encodedseq);
             
-            document.getElementById('prediction').innerText = prediction;
+            // Make prediction
+            const prediction = model.predict(reshapedInput);
+            
+            // Display prediction
+            const predictionValue = prediction.dataSync()[0];
+            document.getElementById('prediction').innerText = `Prediction: ${predictionValue}`;
         }
     </script>
 </head>
