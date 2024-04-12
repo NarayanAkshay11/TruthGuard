@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Guard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script>
+        async function predict() {
+            const text = document.getElementById('userInput').value;
+            const tokenizer = new Tokenizer();
+            tokenizer.fitOnTexts([text]);
+            const sequence = tokenizer.textsToSequences([text]);
+            const maxLen = 100; // Adjust this value based on your model's input size
+            const paddedSequence = padSequences(sequence, {maxLen, padding: 'post', truncating: 'post'});
+            const encodedseq = label_encoder.transform(paddedSequence);
+            
+            const model = await tf.loadLayersModel('path_to_model/model.json');
+            const prediction = model.predict(encodedseq);
+            
+            document.getElementById('prediction').innerText = prediction;
+        }
+    </script>
+</head>
+<body>
+    <h1>Truth Guard</h1>
+    <label for="userInput">Enter your text (up to 500 words):</label><br>
+    <textarea id="userInput" rows="10" cols="50" maxlength="500"></textarea><br><br>
+    <button onclick="predict()">Predict</button><br><br>
+    <div id="prediction"></div>
+</body>
+</html>
