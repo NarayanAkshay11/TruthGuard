@@ -15,7 +15,7 @@
             const paddedSequence = padSequences(sequence, {maxLen, padding: 'post', truncating: 'post'});
             const encodedseq = label_encoder.transform(paddedSequence);
             
-            const model = await tf.loadLayersModel('path_to_model/model.json');
+            const model = await tf.loadLayersModel("fakenews01.h5");
             const prediction = model.predict(encodedseq);
             
             document.getElementById('prediction').innerText = prediction;
