@@ -24,13 +24,13 @@
             const inputTensor = tf.tensor2d(encodedseq);
             
             // Reshape to match model's input shape
-            const reshapedInput = inputTensor.reshape([1, maxLen]);
+            //const reshapedInput = inputTensor.reshape([1, maxLen]);
             
             // Load the model
             const model = await tf.loadLayersModel("fakenews01.h5");
             
             // Make prediction
-            const prediction = model.predict(reshapedInput);
+            const prediction = model.predict(inputTensor);
             
             // Display prediction
             const predictionValue = prediction.dataSync()[0];
