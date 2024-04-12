@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from serverless_flask import Flask
+from flask import render_template, request
 import tensorflow as tf
 import pandas as pd
 import numpy as np
