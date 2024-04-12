@@ -1,0 +1,401 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: "Ysabeau Office", sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0E1428;
+    color: #fff;
+    text-decoration: none;
+    font-size:18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top:10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ABD2FA;
+    color: #0B006E;
+    
+}
+
+/* Header styles */
+header {
+    background-color: #0E1428;
+    color: #fff;
+    padding: 20px 20px;
+    position: fixed;
+    width: calc(100% - 50px);
+    z-index: 1;
+    margin-top: 20px;
+    margin-left: 30px; /* Left margin */
+    margin-right: 30px; /* Right margin */
+    border-radius: 10px; /* Curved edges */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logo span {
+    color: #FFF689;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.logo a:hover{
+    color: #F0AA5F;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size:18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FC7753;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 769px) {
+    .burger {
+        display: block; /* Hide burger menu on larger screens */
+    }
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('https://www.chicagobooth.edu/-/media/project/chicago-booth/chicago-booth-review/2023/january/chicago-booth-fake-news.jpg?cx=0.5&cy=0.41&cw=1880&ch=783&hash=1DBC0227F4A445ABFA1C5FCB22EEC036');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hero-content h1: hover {
+    font-size: 50px;
+    text-align: center;
+    color: #FFF689;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+/* About section styles */
+.about {
+    text-align: left;
+    padding: 80px 0;
+    margin-botton: 20px;
+}
+
+.about-content {
+    font-size:26px;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.about-content p{
+    margin-botton:10px;
+}
+.about-image {
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+/* Projects section styles */
+.projects {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-top:30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 40px 40px;
+    gap: 40px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 24px;
+}
+
+.project-details h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    margin-bottom: 24px;
+    font-size:24px;
+}
+.project-details ul{
+    margin-left:20px;
+}
+
+/* Contact section styles */
+.contact {
+    padding: 80px 0;
+}
+
+.contact h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 150px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f1c40f;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.dropdown-menu {
+    list-style: none;
+    font-weight: bold;
+    font-size:19px;
+    position: absolute;
+    top: 80px;
+    right: 5px;
+    width: auto;
+    background-color: #333;
+    display: none;
+    flex-direction: column;
+    text-align: right;
+    padding: 1px;
+}
+@media (max-width: 768px) {
+    .dropdown-menu.show-dropdown {
+        display: flex; /* Display dropdown menu when show-dropdown class is added */
+    }
+}
+
+.dropdown-menu li {
+    margin: 10px 0;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    color: #f1c40f;
+}
+
+/* Responsive styles for the dropdown menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .dropdown-menu {
+        list-style: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        display: none; /* Initially hide the dropdown menu */
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        /* Initially hide the dropdown menu */
+    }
+    .about-content,
+    .about-image {
+        flex: 1 1 100%;
+        margin-bottom: 40px;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+    .projects {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    }
+
+    .projects h2 {
+        font-size: 36px;
+        margin-top:30px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 20px 20px;
+        gap: 40px;
+    }
+    .project-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .project-card img {
+        width: 80%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .project-details {
+        padding: 24px;
+    }
+
+    .project-details h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .project-details p {
+        margin-bottom: 24px;
+        font-size:24px;
+    }
+    .project-details ul{
+        margin-left:20px;
+    }
+}
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
