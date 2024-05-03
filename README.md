@@ -18,3 +18,5 @@ A web-browser which can read the text on your screen and give the likelyhood of 
 ## Contributions
 Solution formulation & Marketability : 
 ##### Shruti Kannan, Isa Bin Yamin, Dawn
+
+[Find the model here](https://github.com/NarayanAkshay11/SC1015-DSAI-FinalProject)
