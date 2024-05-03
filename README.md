@@ -15,8 +15,11 @@ A web-browser which can read the text on your screen and give the likelyhood of 
     
  3. Add web-scraping capabilities
 
-## Contributions
-Solution formulation & Marketability : 
-##### Shruti Kannan, Isa Bin Yamin, Dawn
+## Contributions - Who worked with me
+Solution formulation & Marketability : Shruti Kannan, Isa Bin Yamin, Dawn
+
+Creation & Testing of model [including Data Cleaning, EDA, Data Driven Insights] : Aryan Garg, Maanya Juneja
+
+
 
 [Find the model here](https://github.com/NarayanAkshay11/SC1015-DSAI-FinalProject)
