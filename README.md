@@ -2,11 +2,11 @@
 
 ##### A Novelle solution to fake news detection which inspired my SC1015 DSAI Final Project
 
-## Idea : 
+### Idea : 
 A web-browser which can read the text on your screen and give the likelyhood of it being true.
 
-## Execution as of now
-##### 1. Sequential Neural Network Model trained and tested
+### Execution as of now
+ 1. Sequential Neural Network Model trained and tested
 
 ## Path Forward
  1. Designing a web-browser to extract text from the screen.
@@ -16,5 +16,5 @@ A web-browser which can read the text on your screen and give the likelyhood of 
  3. Add web-scraping capabilities
 
 ## Contributions
-##### Solution formulation & Marketability : 
-Shruti Kannan, Isa Bin Yamin, Dawn
+Solution formulation & Marketability : 
+##### Shruti Kannan, Isa Bin Yamin, Dawn
