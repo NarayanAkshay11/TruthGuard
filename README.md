@@ -14,4 +14,5 @@ A web-browser which can read the text on your screen and give the likelyhood of 
 ##### 3. Add web-scraping capabilities
 
 ## Contributions
-##### Solution formulation & Marketability : Shruti Kannan, Isa Bin Yamin, Dawn
+##### Solution formulation & Marketability : 
+##### Shruti Kannan, Isa Bin Yamin, Dawn
